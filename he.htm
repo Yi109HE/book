@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>播放多音乐YI</title>
+</head>
+<body>
+
+
+
+
+<div id="audioBox">
+    <script type="text/javascript">
+        window.onload = function(){
+            var arr = ["http://music.163.com/song/media/outer/url?id=2624235389.mp3","http://music.163.com/song/media/outer/url?id=2007676859.mp3","http://music.163.com/song/media/outer/url?id=1474598888.mp3","http://music.163.com/song/media/outer/url?id=1483365025.mp3"];// 
+            var myAudio = new Audio();
+            myAudio.preload = true;
+            myAudio.controls = true;
+            myAudio.src = arr.pop()
+            myAudio.addEventListener('ended', playEndedHandler, false);
+            myAudio.play();
+            document.getElementById("audioBox").appendChild(myAudio);
+            myAudio.loop = false
+            function playEndedHandler(){
+                myAudio.src = arr.pop();
+                myAudio.play();
+                console.log(arr.length);
+                !arr.length && myAudio.removeEventListener('ended',playEndedHandler,false)
+            }
+        }
+    </script>
+</div>
+
+
+</body>
+
+
+
+
+
+
+<body>
+	
+		<a href = "http://nineteen.ysepan.com/" ><img src= "https://img0.baidu.com/it/u=4264256998,304994440&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1069" >
+	
+      </a>
+         </body>
+
+
+
+
+
+
+
+</html>
