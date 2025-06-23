@@ -12,12 +12,24 @@
 
 <body class="w3-content">
 <div class="w3-container">
-<h1>逻辑</h1>
-<p>在形而如果不90808不放过大概</p>
-
-
-</ul>
-</div>
+</head>
+<body>
+	<h1 align="center">amo 文字变色xiang</h1>  
 
 </body>
+</html>
+<script>
+	var colors=new Array("red","orange","green","blue","browm","putple","gray","white");
+	var ind=0;
+	function changecolor(){
+	   document.fgColor=colors[ind++];
+	   if (ind==(colors.length)){ind=0}
+	}
+	setInterval("changecolor()",500);
+	window.onload=changecolor;
+</script> 
+
+
+</body>
+
 </html>
