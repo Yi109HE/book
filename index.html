@@ -12,99 +12,34 @@
 <body class="w3-content">
 
 <div class="w3-container">
-
-
 </head>
-
-<body>
-&nbsp;
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>
+<body onload=wavy(0)>
+	<div align="center" id="Tdiv"></div>
+</body>
+</html>
 <script>
-var textstr="我们相亲相爱的Yi家";
-var TColor="#AA92C7";
-var TFont="楷书";
-textstr=textstr.split("");
-var n=textstr.length;
-var mass=360/n;
-var cy=cx=sb=0;
-var yb=50;
-var xb=60;
-var sa=0.1;
-var pa=new Array();
-var pb=new Array();
-for (i=0; i < n; i++) document.write('<div id="logo" style="position:absolute;top:0;left:0;'+'height:30px;width:30px;font-family:'+TFont+';text-align:center;color:'+TColor+'">'+textstr[i]+'</div>');
-function sport(){
-  cy=document.body.scrollTop+60;
-  cx=document.body.scrollLeft+window.document.body.clientWidth-100;
-  for (i=0; i < n; i++){
-     logo[i].style.top =cy+yb*Math.sin(sb+i*mass*Math.PI/180);
-     logo[i].style.left=cx+xb*Math.cos(sb+i*mass*Math.PI/180);
-     pb[i]=logo[i].style.pixelTop-cy;
-     pa[i]=pb[i]-pb[i]*2;
-     if (pa[i] < 1){
-        pa[i]=0;
-        logo[i].style.visibility='hidden';
-     }
-     else logo[i].style.visibility='visible';
-     logo[i].style.fontSize=pa[i]/1.7;
-  }
-  sb-=sa;
-  setTimeout('sport()',100);
+var theText = "懿勤怡勇 我们相亲相爱的Yi家";
+function Cycle(text,dis){
+   str = "";
+   for (i = 0; i < text.length; i++){
+      size = 72*Math.abs( Math.sin((i+dis)/(text.length/3.14)));
+      str += "<span style='font-size: "+ size +"px;color:rgb(200,0,"+parseInt(size+70)+")'>" +text.substring(i,i+1)+ "</span>";
+   }
+   Tdiv.innerHTML = str;
 }
-sport();
+function wavy(n){
+   Cycle(theText,n);
+   if (n > theText.length) {n=0}
+   setTimeout("wavy(" + (n+1) + ")", 100);
+}
 </script>
-</p>
+</div>
 
+<p><a href="学.htm">学用知识管理</a></p>
 
- 
-<p><a href="学.htm">形而上学</a></p>
+<p><a href="好.htm">好的习惯</a></p>
 
-<p><a href="好.htm">认识论</a></p>
-
-<p><a href="yi.htm">逻辑</a></p>
+<p><a href="yi.htm">Yi逻辑</a></p>
 
 <p><a href="记录.htm">记录</a></p>
 
@@ -122,16 +57,14 @@ sport();
 
 <p><a href="琴.htm">琴</a></p>
 
-<p><a href="he.htm">去</a></p>
+<p><a href="勇.htm">勇</a></p>
 
 <p><a href="he.htm">给</a></p>
 
-<p><a href="he.htm">看</a></p>
+<p><a href="he.htm">歌曲</a></p>
 
-
-       
+<p><a href="he.htm">音乐生日快乐</a></p>
+    
 </div>
-
 </body>
 </html>
-
