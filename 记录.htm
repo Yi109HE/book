@@ -7,7 +7,24 @@
 <link rel="icon" type="image/x-icon" href="./guo.ico">
   <link rel="apple-touch-icon" href="./guo.ico">
 
-
+<style>
+		text{
+		   font-family:SimHei;            /*定义字体HE实现线性渐变空心文字效果*/
+		   font-size:56px;                /*定义文字大小*/
+		   font-weight:bolder;            /*定义字体粗细*/
+		}
+	</style>
+</head>
+<body>
+	<svg width="600" height="300">
+	    <defs>
+	        <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+	            <stop offset="0%" stop-color="#FF0000"></stop>
+	            <stop offset="50%" stop-color="#00FF00"></stop>
+	            <stop offset="100%" stop-color="#0000FF"></stop>
+	        </linearGradient>
+	    </defs>
+   		<text x="30" y="150" fill="transparent" stroke="url(#linear)">
 看
 \\192.168.1.180\1Yi
 file://HE/1Yi
@@ -28,10 +45,9 @@ http://192.168.1.180:23109
 钟表可以回到起点，却已不是昨天；感情可以回到原点，却再也不像从前；人生只有因果，但没有如果，时光不能倒着走，失去了就别再回头，且行且珍惜
 
 
+</text>
 
-
-</ul>
-</div>
+	</svg>
 
 </body>
 </html>
