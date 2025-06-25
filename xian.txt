@@ -1,0 +1,43 @@
+开源github仓库建立及配置笔记20250619
+
+
+下载https://git-scm.com/
+
+
+git config --global user.name "github上注册的用户名"
+git config --global user.name "Yi109HE"
+git config --global user.email "github上注册的邮箱"
+git config --global user.email "Yiwxq@outlook.com"
+
+
+
+
+
+git config --global user.name "github上注册的用户名" # 配置用户名
+git config --global user.email "github上注册的邮箱" # 配置用户邮箱
+git config --global user.name # 查看配置的用户名
+git config --global user.email # 查看配置的用户邮箱
+
+
+
+
+ssh-keygen -t rsa -C "Yiwxq@outlook.com"
+
+
+
+/c/Users/yiwxq.E-09/.ssh/id_rsa 微软网盘里面文件
+
+ssh -T Yiwxq@outlook.com
+
+先在电脑D盘新建github
+文件夹
+cd /D
+
+ls
+cd /D/github
+
+git clone https://github.com/Yi109HE/qin.git
+
+
+在github文件夹里新建test文件夹
+cd ./test
